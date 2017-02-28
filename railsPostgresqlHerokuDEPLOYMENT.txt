@@ -1,5 +1,5 @@
 CREACIÓN PROYECTO RAILS POSTGRESQL Y DEPLOYMENTS HEROKU
-JOSE SANTORCUATO TAPIA
+JOSE SANTORCUATO TAPIA 
 santorcuato76@gmail.com
 Chile 2017
 
@@ -18,6 +18,14 @@ sudo -u postgres createuser -s usuariopg
 
 
 sudo -u postgres psql
+
+
+\password usuariopg #permite asiganrle contraseña al usuario, importante para rails
+
+
+Puedes salir ahora
+
+\q
 
 
 CREACIÓN PROYECTO RAILS + BBDD POSTGRESQL + DEPLOYMENT
