@@ -1,0 +1,9 @@
+INSTALACIÓN JAVA JDK 
+JOSÉ SANTORCUATO TAPIA
+Chile 2017
+santrcuato76@gmail.com
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-javaX-installer #X es la versión a instalar
+

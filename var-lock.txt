@@ -1,0 +1,31 @@
+SOLUCIÓN ERROR: 
+
+E: No se pudo bloquear /var/lib/dpkg/lock - open (11: Recurso
+no disponible temporalmente)
+E: No se pudo bloquear el directorio de administración (/var/lib/dpkg/),
+¿quizás haya algún otro proceso utilizándolo?
+
+JOSÉ SANTORCUATO TAPIA
+santorcuato76@gmail.com
+
+sudo su
+
+sudo fuser -vki  /var/lib/dpkg/lock 
+
+sudo rm -f /var/lib/dpkg/lock
+
+dpkg --configure -a
+
+apt-get install -f
+
+apt-get update
+
+apt-get upgrade
+
+apt-get autoremove
+
+apt-get clean
+
+
+rm -R /var/lib/dpkg/updates/000x
+

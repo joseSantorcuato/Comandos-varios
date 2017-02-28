@@ -1,0 +1,8 @@
+
+mysql -u root -p
+
+CREATE USER 'servidor'@'localhost' IDENTIFIED BY 'servidor';
+
+GRANT ALL PRIVILEGES ON * . * TO 'servidor'@'localhost';
+
+mysql -u servidor -p

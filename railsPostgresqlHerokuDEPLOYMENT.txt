@@ -1,0 +1,109 @@
+CREACIÓN PROYECTO RAILS POSTGRESQL Y DEPLOYMENTS HEROKU
+JOSE SANTORCUATO TAPIA
+santorcuato76@gmail.com
+Chile 2017
+
+INSTALAR POSTGRESQL
+
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+
+
+gem 'pg'
+
+
+Bundle install // actualizará dependencias
+
+
+sudo -u postgres createuser -s usuariopg
+
+
+sudo -u postgres psql
+
+
+CREACIÓN PROYECTO RAILS + BBDD POSTGRESQL + DEPLOYMENT
+
+rails new mi_app --database=postgresql
+
+Agregar en Gemfile
+
+
+ruby "2.4.0" // la version de sruby que tengas instalada
+
+
+en mi database.ymlo
+
+
+en apllication.erb
+
+config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: miusuariopg
+  password: miclavepg
+
+
+Cambiar en enviroments/production.rb
+
+config.assets.compile = true
+
+
+Bundle install 
+
+bundle exec rake db:create
+bundle exec rake db:migrate
+rake assets:precompile
+
+rails server
+
+
+Base de datos creada y funcionando
+
+HEROKU
+
+Ingresamos al directorio de la app RAILS 
+
+cd mi_app
+
+git init
+$ git add .
+$ git commit -m "init"
+
+heroku create 
+
+git config --list | grep heroku
+
+
+git push heroku master
+
+CORRER BD CON HEROKU
+
+heroku run rake db:migrate 
+
+
+PARA ELLIMINAR APP:
+
+heroku apps:destroy --app pacific-mountain-88171// para eliminar app
+
+Para los links 
+
+heroku run rake routes  
+
+heroku restart -a la-ruta-de-tu-server-765432
+
+heroku ps:scale web=1
+
+heroku open
+ 
+
+
+
+
+
+

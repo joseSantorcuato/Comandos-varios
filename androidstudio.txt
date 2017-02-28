@@ -1,0 +1,68 @@
+INSTALACIÓN ANDROID STUDIO, SDK Y CORDOVA, GNULINUX UBUNTU 16.04
+JOSÉ SANTORCUATO TAPIA
+Chile 2017
+santorcuato76@gmail.com
+
+*Instalar JAVA Jdk.x
+
+Descargar 
+
+ANDROID STUDIO
+
+https://developer.android.com/studio/index.html
+
+Descomprimir en escritorio y escribir en terminal
+
+Escritorio/android-studio/bin$ ./studio.sh
+
+Establecer parámetros de manera manual o automática, proceder a instalación
+
+Ruta SDK
+
+/home/tusuario/Android/Sdk/tools/
+
+CORDOVA
+
+sudo add-apt-repository ppa:cordova-ubuntu/ppa
+
+sudo apt-get update
+
+sudo apt install cordova
+
+También con npm 
+
+sudo apt install npm
+
+//Para OSX brew install node
+
+sudo npm install -g cordova
+
+ERROR NODE
+
+/usr/bin$ sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+sudo npm install -g cordova
+
+
+VERSIÓN CORDOVA
+
+cordova --v
+
+CREACIÓN PROYECTO
+
+cordova create uno
+
+cordova platform add android
+
+export ANDROID_HOME="/home/tusuario/Android/Sdk"
+
+cordova build
+
+
+
+
+
+
+
+
+
