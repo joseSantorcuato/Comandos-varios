@@ -1,0 +1,9 @@
+INSTALACIÓN ZIP, TAR, RAR UBUNTU 16.04
+José Santorcuato Tapia
+santorcuato76@gmail.com
+
+sudo apt-get install zip gzip tar
+
+zip -r nuevoArchivo.zip miArchivo
+
+zip -r tutoRails.zip tutoRails
