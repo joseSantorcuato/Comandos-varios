@@ -1,0 +1,45 @@
+DEPLOYMENT HEROKU
+José Santorcuato
+santorcuato76@gmail.com
+Chile2017
+
+Ingresamos al directorio de la app RAILS 
+
+cd mi_app
+
+DEPLOYMENT HEROKU
+José Santorcuato
+santorcuato76@gmail.com
+Chile 2017
+
+git init
+git add .
+git commit -m "init"
+
+heroku create 
+
+git config --list | grep heroku
+
+
+git push heroku master
+
+CORRER BD CON HEROKU
+
+heroku run rake db:migrate 
+
+
+PARA ELLIMINAR APP:
+
+heroku apps:destroy --tu-app-12345// para eliminar app
+
+Para los links 
+
+heroku run rake routes  
+
+heroku restart -a tu-app-12345
+
+heroku ps:scale web=1
+
+heroku open
+ 
+

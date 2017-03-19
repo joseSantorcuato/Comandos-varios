@@ -1,0 +1,6 @@
+INSTALACIÓN FORMATO EXFAT PAR LINUX, UBUNTU 16.04
+JOSÉ SANTORCUATO TAPIA
+Chile 2017
+santorcuato76@gmail.com
+
+sudo apt-get install exfat-fuse exfat-utils
