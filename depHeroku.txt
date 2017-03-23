@@ -28,9 +28,9 @@ CORRER BD CON HEROKU
 heroku run rake db:migrate 
 
 
-PARA ELLIMINAR APP:
+PARA ELIMINAR APP:
 
-heroku apps:destroy --tu-app-12345// para eliminar app
+heroku apps:destroy tuApp
 
 Para los links 
 
