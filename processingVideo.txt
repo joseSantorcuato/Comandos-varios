@@ -1,0 +1,9 @@
+INSTALACIÓN LIBRERÍAS PARA VIDEO PROCESSING UBUNTU 16.04
+SOLUCIÓN A ERROR IllegalArgumentException: No such Gstreamer factory: v4l2src
+JOSÉ SANTORCUATO TAPIA 
+CHILE 2017
+
+sudo add-apt-repository ppa:mc3man/gstffmpeg-keep
+sudo apt-get update
+sudo apt-get install gstreamer0.10-ffmpeg
+sudo apt-get install gstreamer0.10-plugins-good
