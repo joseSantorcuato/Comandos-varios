@@ -1,0 +1,62 @@
+COMANDOS BÁSICOS POSTGRESQL
+JOSÉ SANTORCUATO
+santorcuato76@gmail.com
+Chile 2017
+
+
+Para muchos que venimos de SQL y MySql este pequeño tutorial servirá para la migración a postgreSQL
+
+
+Trabajaremos con una base de datos de con estos campos:
+
+  nombre  | apellido_p | apellido_m | edad | fecha_ingreso 
+----------+------------+------------+------+---------------
+ Javiera  | Montes     | Díaz       |   32 | 2017-03-19
+ Renato   | Muñoz      | López      |   41 | 2017-03-19
+
+
+sudo -u postgres createuser -s tuUsuario // pedirá contraseña
+sudo -u postgres createuser -s pguser // pedirá contraseña
+
+
+CREATE USER usuario PASSWORD 'pass';
+
+ALTER ROLE usuario WITH SUPERUSER, CREATEDB, CREATEUSER;
+
+
+ALTER USER usuario WITH PASSWORD 'nuevapass';// si quieres cambair la pass de algun usuario
+
+
+sudo su - postgres //ingreso a servidor...
+
+psql
+
+CREATE DATABASE datos_personales WITH OWNER usuario;
+
+\c datos_personales// te conectas a la base de datos, de ahi las consultas
+
+CREATE TABLE datos (nombre varchar(80), apellido_p varchar(80), apellido_m varchar(80),edad int,fecha_ingreso date);
+
+INSERT INTO datos (nombre, apellido_p, apellido_m, edad, fecha_ingreso) VALUES ('Javiera ', 'Montes', 'Díaz', 32, '2017-03-19 15:38:54.561004');
+INSERT INTO datos (nombre, apellido_p, apellido_m, edad, fecha_ingreso) VALUES ('Renato ', 'Muñoz', 'López', 41, '2017-03-19 15:38:54.561004');
+
+
+\d+ datos // permite revisar estructura de base de datos
+
+\d datos // este comando permite revisar campos de determinada tabla
+
+SELECT count(*) FROM datos; // comando cuenta todos los campos ingresados den tabla profesores
+
+SELECT * FROM datos; //comando para traer todos los datos de la tabla
+
+SELECT edad FROM datos;
+
+SELECT* FROM profesores WHERE disciplina = 'Desarrollo';
+
+
+UPDATE datos SET nombre = 'Mario' WHERE apelliido_p = 'Montes';
+
+DELETE FROM datos WHERE nombre <> 'Renato';
+
+\q salir
+
