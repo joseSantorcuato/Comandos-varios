@@ -1,0 +1,54 @@
+INSTALACIÓN POSTGRESQL OSX
+JOSE SANTORCUATO TAPIA 
+santorcuato76@gmail.com
+Chile 2017
+
+INSTALAR POSTGRESQL
+
+brew install postgresql
+
+
+gem install pg -v 0.1x.x
+
+brew services restart postgresql
+
+postgres -V
+
+psql -d postgres
+psql postgres
+
+\du //usuarios
+
+sudo -u nombreMaquina createuser -s usuario;
+
+psql postgresql
+
+\password usuario #permite asignar contraseña al usuario, importante para rails
+
+
+Puedes salir ahora
+
+\q
+
+CREATE DATABASE datos_personales WITH OWNER usuario;
+
+\c datos_personales// te conectas a la base de datos, de ahi las consultas
+
+CREATE TABLE datos (nombre varchar(80), apellido_p varchar(80), apellido_m varchar(80),edad int,fecha_ingreso date);
+
+INSERT INTO datos (nombre, apellido_p, apellido_m, edad, fecha_ingreso) VALUES ('Javiera ', 'Montes', 'Díaz', 32, '2017-03-19 15:38:54.561004');
+INSERT INTO datos (nombre, apellido_p, apellido_m, edad, fecha_ingreso) VALUES ('Renato ', 'Muñoz', 'López', 41, '2017-03-19 15:38:54.561004');
+
+
+\d+ datos // permite revisar estructura de base de datos
+
+\d datos // este comando permite revisar campos de determinada tabla
+
+SELECT count(*) FROM datos; // comando cuenta todos los campos ingresados den tabla profesores
+
+SELECT * FROM datos; //comando para traer todos los datos de la tabla
+
+SELECT edad FROM datos;
+
+SELECT* FROM profesores WHERE disciplina = 'Desarrollo';
+
