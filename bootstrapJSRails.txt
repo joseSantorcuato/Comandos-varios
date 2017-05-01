@@ -1,0 +1,101 @@
+INTEGRACIÓN RUBY RAILS BOOTSTRAP
+JOSÉ SANTORCUATO TAPIA
+santorcuato76@gmail.com
+
+https://rubygems.org/gems/bootstrap-sass/versions/3.3.6
+gem install bootstrap-sass -v 3.3.6
+rails generate controller Inicio index
+
+Editar archivo Gemfile
+
+gem 'bootstrap-sass', '~> 3.x.0'
+gem 'autoprefixer-rails'
+
+Esto en el index.html del apps/views
+
+En la vista index.html.erb
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preba</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                                              'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Muestra Ruby y Boostrap", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Inicio",   '#' %></li>
+            <li><%= link_to "Ayuda",   '#' %></li>
+            <li><%= link_to "Log in", '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
+
+
+
+
+Editar  inicio.scss
+
+// Place all the styles related to the Inicio controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+//Agregar estilos
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+En application.js
+
+Agregar librerías js a utilizar
+
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree .
+//= flotr2.min
+//= flotr2
+//= require bootstrap-sprockets
+
+en config/production.rb
+
+config.assets.compile = true
+
+en locales/application.rb agregar fonts
+
+config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
