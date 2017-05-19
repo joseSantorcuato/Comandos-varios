@@ -1,0 +1,51 @@
+INSTALADOR RUBY EN WINDOWS
+JOSÉ SANTORCUATO TAPIAS
+santorcuato76@gmail.com
+CHILE2017
+
+Conviene recordar que los mejores ambientes para desarrollo ruby son los basados en Linux y Unix
+En windows siempre será más engorroso y la experiencia se verá mermada.
+Recomiendo al menos virtualizar.
+De todos modos acá te enseño como instalarlo, lo probé en un win7 Professional virtualizado adentro de un Mac.
+
+Te recomiendo tener la consola GIT, es siempre mejor una consola tipo Unix a una WIN.
+
+https://rubyinstaller.org/
+
+Instalar ruby
+
+Luego descargar el devkit, ubicarlo en una carpeta y entrar (cd)
+
+ruby dk.rb init
+
+https://www.apachefriends.org/es/index.html descargar XAMP
+
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows pg
+
+
+gem install activerecord-sqlserver-adapter
+
+
+gem install mysql2 -v 0.4.4
+
+
+//CÓDIGO
+
+require 'mysql2' # Debes instalar la gema mysql2, acá la llamas
+
+bienvenida = "MYSQL2 - \nTutorial de Ruby \nJosé Santorcuato Tapia\nChile 2017"
+  puts bienvenida
+
+espacio = " \n"
+  puts espacio
+  client = Mysql2::Client.new(:host => "127.0.0.1", :username => "usuario", :database => 'basededatos')
+  results = client.query("SELECT * FROM registros")
+
+  results.each do |row|
+
+  puts row["id"]
+  puts row["nom"]
+  puts row["fecha"]
+  puts row["hora"]
+end
+
