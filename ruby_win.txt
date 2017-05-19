@@ -18,6 +18,10 @@ Luego descargar el devkit, ubicarlo en una carpeta y entrar (cd)
 
 ruby dk.rb init
 
+gem update --system
+
+
+
 https://www.apachefriends.org/es/index.html descargar XAMP
 
 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows pg
