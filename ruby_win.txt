@@ -18,8 +18,12 @@ Luego descargar el devkit, ubicarlo en una carpeta y entrar (cd)
 
 ruby dk.rb init
 
+ruby dk.rb install
+
 gem update --system
 
+#También puedes instalar desde acá rails
+#gem install rails
 
 
 https://www.apachefriends.org/es/index.html descargar XAMP
@@ -52,4 +56,3 @@ espacio = " \n"
   puts row["fecha"]
   puts row["hora"]
 end
-
