@@ -1,0 +1,44 @@
+INSTALACIÓN MYSQL PHPMYADMIN 
+José Santorcuato Tapia
+santorcuato76@gmail.com
+
+sudo apt-get install mysql-server
+
+//Pedirá contraseña
+
+mysql -u root -p
+
+//Auntentifica usuario mysql
+
+sudo apt-get install python-mysqldb
+
+sudo apt-get install apache2 php5 libapache2-mod-php5
+
+sudo apt-get install phpmyadmin
+
+//Seleccionar si y agregar contraseña, uso la misma mysql
+
+sudo gedit /etc/apache2/apache2.conf
+
+//Al final del archivo 
+
+Include /etc/phpmyadmin/apache.conf
+
+sudo /etc/init.d/apache2 restart
+
+mysql --version
+
+sudo systemctl stop mysql
+
+sudo mysqld_safe --skip-grant-tables --skip-networking &
+
+mysql -u root
+
+FLUSH PRIVILEGES;
+
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('new_password');
+
+sudo systemctl start mysql
+
+
+
