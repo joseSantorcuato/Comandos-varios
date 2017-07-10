@@ -1,0 +1,34 @@
+INSTALACIÓN PANTALLA 3,5" GENÉRICA EN RPI3
+José Santorcuato Tapia
+santorcuato76@gmail.com
+
+A partir de http://www.waveshare.com/wiki/3.5inch_RPi_LCD_(A)
+
+
+Descargar 
+
+http://www.waveshare.com/w/upload/0/00/LCD-show-170703.tar.gz
+
+Descomprimir y cambiar de directorio
+
+tar xvf LCD-show-*.tar.gz
+
+cd LCD-show/
+
+Permisos y activar LCD se reinicia 
+
+chmod +x LCD35-show
+
+./LCD35-show
+
+Cambiar a HDMI
+
+cd LCD-show/
+
+./LCD-hdmi
+
+Rotación
+
+cd LCD-show/
+
+./LCD35-show 180
