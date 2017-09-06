@@ -1,0 +1,26 @@
+INSTALACIÓN RUBY EN OSX Y OS
+
+JOSÉ SANTORCUATO TAPIA
+CHILE
+
+Instalar XCODE y línea de comandos
+
+$ xcode-select --install
+
+Instalar Homebrew
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew update
+
+brew install ruby-build
+
+brew install rbenv
+
+rbenv install 2.4.1
+
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+rbenv global 2.4.1
+
+ruby -v
