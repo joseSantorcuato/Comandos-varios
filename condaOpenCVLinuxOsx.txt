@@ -1,0 +1,46 @@
+INSTALACIÓN CONDA Y OPEN CV3 PYTHON3
+
+MACOSX, MACOS, Linux
+
+José Santorcuato Tapia
+
+santorcuato76@gmail.com
+
+Chile 2017
+
+//conda install, remove, update paquetes
+
+bash Miniconda3-latest-Linux-x86_64.sh //
+
+Si a todo
+
+rm -rf ~/miniconda3 // para desinstalar
+
+conda list //
+
+conda create -n cvision python=3.6//ubuntu
+
+conda create -n cvision python=3.5 //macos
+
+conda env remove --name cvision //eliminar ambiente
+
+source activate cvision /actuva ambiente
+
+conda install --channel https://conda.anaconda.org/menpo opencv3 //linux
+
+conda install -c menpo opencv3 //macos
+
+conda install matplotlib
+
+
+import cv2
+cv2.__version__
+
+
+import numpy as np
+import cv2
+img = cv2.imread('mono.jpg',0)
+cv2.imshow('image',img)
+k = cv2.waitKey(0)
+if k == 27: # wait for ESC key to exit
+    cv2.destroyAllWindows()
