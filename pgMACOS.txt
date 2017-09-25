@@ -1,0 +1,9 @@
+psql postgres
+
+CREATE ROLE pguser WITH LOGIN PASSWORD 'bobmarley2';
+
+ALTER ROLE pguser WITH SUPERUSER;
+
+ALTER ROLE pguser CREATEDB;
+
+ALTER ROLE pguser WITH CREATE ROLE;

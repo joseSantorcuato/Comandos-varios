@@ -27,7 +27,7 @@ eval "$(pyenv virtualenv-init -)
 
 pyenv virtualenv 3.6.2 ambiente36 // para instalar un ambiente 3.6
 
-pyenv virtualenv 2.7 ambiente27 // para instalar un ambiente 2.7
+pyenv virtualenv 2.7 recvoice // para instalar un ambiente 2.7
 
 
 
