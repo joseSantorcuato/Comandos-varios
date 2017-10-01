@@ -1,0 +1,8 @@
+INSTALACIÓN OPENCV PYTHON 2.7
+JOSÉ SANTORCUATO TAPIA
+CHILE 2017
+
+bash Miniconda2-latest-MacOSX-x86_64.sh
+conda create -n anidado python
+source activate anidado
+conda install -c menpo opencv
