@@ -1,0 +1,37 @@
+INSTALACIÓN LARAVEL
+
+Instalar repositorios php
+
+sudo apt-get install apache2
+
+sudo apt-get install libapache2-mod-php
+
+sudo add-apt-repository ppa:ondrej/php
+
+sudo apt-get update
+
+sudo apt-get install php7.0 php7.0-mysql libapache2-mod-php7.0 php-apcu php7.0-gd php7.0-mcrypt php-memcache php7.0-curl php7.0-tidy php-xml php-json php7.0-mbstring php-gettext libmcrypt-dev mcrypt php-gd libmcrypt4 libmhash2 libtidy5 libxslt1.1 php-apcu-bc php-pear php7.0-mbstring php7.0-xml
+
+sudo apt-get install php7.0-zip
+
+sudo apt-get install zip
+
+sudo apt-get install taskel
+
+sudo apt-get update
+
+sudo apt-get install composer
+
+composer global require "laravel/installer"
+
+composer create-project laravel/laravel tuproyecto
+
+composer create-project laravel/laravel tuproyecto 5.5.* // en caso de querer esp. versión
+
+Ingresar al proyecto y ejecutar
+
+php artisan serve
+
+Si aparece el error Whopps...
+
+chmod -R 777 storage; cp -p .env.example .env; php artisan key:generate
