@@ -1,9 +1,0 @@
-INSTALACIÓN PUERTOS ARDUINO MACOS PUERTOS USBC , SIERRA
-JOSÉ SANTORCUATO TAPIA
-CHILE 2017
-
-Para instalar Arduino en MACOS 15 PUERTOS USBC
-
-https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver
-
-Descargar el pkg e instalar, abrir IDE Arduino y ya estarán los puertos instalados
