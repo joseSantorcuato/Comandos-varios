@@ -1,0 +1,6 @@
+virtualenv --version
+virtualenv -p python3 nombreProyecto
+atom ~/.bashrc
+source tierramadre/bin/activate
+source "/root/Escritorio/tierramadre/bin/activate"
+
